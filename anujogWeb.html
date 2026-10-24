@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anujog: Closer, on purpose</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F7F4EB;--ink:#3A4639;--mu:#5C6657;--g:#4B6B56;--t:#C06A4F;--td:#A4503A;--o:#D4A35B;--card:#EEEADC;--line:#D9D6C8;--h1:#A7B8A4;--h2:#4B6B56;--h3:#3A4639;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E251F;--ink:#F7F4EB;--mu:#B9C0AC;--g:#A7B8A4;--t:#D98A6D;--td:#E3A084;--o:#D4A35B;--card:#28312A;--line:#3A4639;--h1:#3A4639;--h2:#2F3B31;--h3:#262F27;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1E251F;--ink:#F7F4EB;--mu:#B9C0AC;--g:#A7B8A4;--t:#D98A6D;--td:#E3A084;--o:#D4A35B;--card:#28312A;--line:#3A4639;--h1:#3A4639;--h2:#2F3B31;--h3:#262F27;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;margin:0;letter-spacing:-.02em}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--t);outline-offset:3px}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) 24px 14px;background:linear-gradient(var(--bg),transparent)}
+nav b{font:500 22px Fraunces,Georgia,serif}nav div{display:flex;gap:6px}
+nav button{background:none;border:0;min-height:44px;padding:0 12px;font-size:14px;color:var(--mu)}
+.hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;padding:0 6vw}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;max-width:760px;pointer-events:none}
+.hero h1{font-size:clamp(52px,10vw,132px);font-weight:300}.hero h1 em{color:var(--t);font-style:italic}
+.hero p{max-width:520px;color:var(--mu);font-size:19px;margin:22px 0 28px}
+.hero .btns{pointer-events:auto;display:flex;gap:12px;flex-wrap:wrap}
+.b1,.b2{min-height:48px;padding:0 24px;border-radius:30px;font-weight:600;border:2px solid var(--g)}
+.b1{background:var(--g);color:var(--bg)}.b2{background:none;color:var(--g)}
+.b1:hover{background:var(--td);border-color:var(--td);color:var(--bg)}.b2:hover{background:var(--card)}
+.sc{position:absolute;bottom:24px;left:50%;translate:-50% 0;font-size:12px;letter-spacing:.2em;color:var(--mu);text-align:center}
+.sc i{display:block;width:1px;height:38px;background:var(--mu);margin:8px auto 0;animation:dr 2s infinite;transform-origin:top}
+@keyframes dr{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.land{position:absolute;left:0;right:0;bottom:0;width:100%;height:48%;pointer-events:none}.land g{will-change:transform}
+section{padding:14vh 6vw}.k{font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--td);margin-bottom:18px}
+.hook h2{font-size:clamp(38px,7vw,92px);max-width:1000px}.hook h2 span{display:inline-block;opacity:0;transform:translateY(.6em);transition:.8s cubic-bezier(.2,.7,.2,1)}.hook.in h2 span{opacity:1;transform:none}
+.hook p{max-width:600px;color:var(--mu);font-size:19px;margin-top:34px}
+.story{height:320vh;padding:0}.sticky{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+#sv{width:min(900px,92vw)}#cap{font:300 clamp(30px,5vw,60px) Fraunces,Georgia,serif;min-height:1.4em;margin-top:10px;transition:opacity .4s}
+.rv{opacity:0;transform:translateY(30px);transition:.9s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+.sol h2{font-size:clamp(44px,8vw,110px)}.sol h2 em{color:var(--t)}
+.four{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;margin-top:48px;border-top:1px solid var(--line)}
+.four div{padding:26px 22px 26px 0;border-bottom:1px solid var(--line)}.four h3{font-size:30px;color:var(--g)}.four p{color:var(--mu);margin:8px 0 0;font-size:16px}
+.loop{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:34px}.loop span{padding:10px 20px;border-radius:30px;background:var(--g);color:var(--bg);font:400 18px Fraunces,Georgia,serif}.loop i{color:var(--t);font-style:normal}
+.demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;align-items:center}
+.demo h2{font-size:clamp(36px,5vw,64px)}.demo p{color:var(--mu)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.tabs button{min-height:44px;padding:0 18px;border-radius:24px;border:1.5px solid var(--line);background:none}
+.tabs button[aria-pressed="true"]{background:var(--g);color:var(--bg);border-color:var(--g)}
+.phone{width:330px;height:640px;margin:0 auto;border:8px solid #1d1d19;border-radius:46px;background:var(--bg);overflow:hidden;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.25)}
+.phone:before{content:"";position:absolute;top:8px;left:50%;translate:-50% 0;width:90px;height:24px;border-radius:14px;background:#1d1d19;z-index:3}
+.scr{position:absolute;inset:0;padding:56px 20px 20px;opacity:0;pointer-events:none;transition:.5s;transform:translateX(24px)}.scr.on{opacity:1;pointer-events:auto;transform:none}
+.scr h3{font-size:34px;color:var(--ink)}.scr small{display:block;color:var(--mu);margin:6px 0 14px;font-size:14px;line-height:1.4}
+.pc{background:var(--card);border-radius:22px;padding:16px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.opts button{min-height:44px;padding:0 14px;border-radius:22px;border:1.5px solid var(--g);background:none;font-size:14px}.opts button[aria-pressed="true"]{background:var(--td);border-color:var(--td);color:var(--bg)}
+.res{font:italic 400 17px/1.4 Fraunces,Georgia,serif;min-height:96px}
+.bl{position:relative;height:200px;margin:6px 0}.bl i{position:absolute;top:30px;width:130px;height:150px;border-radius:50% 45% 55% 50%;transition:transform .9s cubic-bezier(.2,.7,.2,1);mix-blend-mode:multiply}
+.bl i:first-child{background:var(--g);left:30px;opacity:.9}.bl i:last-child{background:var(--t);right:30px;opacity:.85}
+.bl.sh i:first-child{transform:translateX(34px)}.bl.sh i:last-child{transform:translateX(-34px)}
+.sw{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:52px;padding:0 16px;border-radius:30px;border:1.5px solid var(--line);background:var(--card);font-size:14px;text-align:left}
+.sw s{flex:none;position:relative;width:46px;height:26px;border-radius:13px;background:var(--line);text-decoration:none;transition:.3s}.sw s:after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.3s}
+.sw[aria-checked="true"] s{background:var(--g)}.sw[aria-checked="true"] s:after{left:23px}
+.cards{display:flex;gap:8px}.cards button{flex:1;height:230px;border:0;border-radius:14px;padding:10px;color:#fff;font:400 15px/1.3 Fraunces,Georgia,serif;display:flex;align-items:flex-end;text-align:left;transition:transform .5s}
+.cards button:nth-child(1){background:linear-gradient(#A7B8A4,#4B6B56)}.cards button:nth-child(2){background:linear-gradient(#D4A35B,#B05A40)}.cards button:nth-child(3){background:linear-gradient(#A7B8A4,#3A4639)}
+.cards button:hover{transform:translateY(-6px)}.cards button.f{transform:scale(1.04)}
+.lt{display:flex;flex-direction:column;gap:8px}.lt .sw{border-radius:18px;min-height:60px}
+.jr{max-width:760px;margin:40px 0 0;position:relative;padding-left:34px}.jr:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.jr .st{position:relative;margin-bottom:34px}.jr .st:before{content:"";position:absolute;left:-34px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--t);box-shadow:0 0 0 6px var(--bg)}
+.jr h3{font-size:28px;color:var(--g)}.jr p{margin:6px 0 0;color:var(--mu)}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px 6vw;margin-top:40px}
+.why h3{font-size:30px;color:var(--g);margin-bottom:8px}.why p{margin:0;color:var(--mu)}
+.note{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);color:var(--mu);font-style:italic;font-size:15px}
+.end{text-align:center;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.end svg{width:min(560px,86vw)}.end path{fill:none;stroke:var(--g);stroke-width:1.4;stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 2.4s ease}.end.in path{stroke-dashoffset:0}.end path:nth-child(even){stroke:var(--t)}
+.end h2{font-size:clamp(42px,8vw,104px);margin:10px 0 28px}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:0 24px 40px}
+@media (max-width:860px){.demo{grid-template-columns:1fr}.nav-l{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv,.hook h2 span{opacity:1;transform:none}.end path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<nav><b>Anujog</b><div class="nav-l"><button data-go="story">The story</button><button data-go="product">The product</button><button data-go="why">Why it’s different</button></div></nav>
+
+<header class="hero"><svg class="land" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<g id="ls"><circle cx="880" cy="110" r="64" fill="var(--o)"/></g>
+<g id="l1"><path d="M0 250C150 160 300 140 450 205C600 270 700 180 850 180C1000 180 1100 220 1200 190L1200 400L0 400Z" fill="var(--h1)"/></g>
+<g id="l2"><path d="M0 300C200 230 330 250 500 300C650 340 800 270 950 290C1050 300 1130 280 1200 270L1200 400L0 400Z" fill="var(--h2)"/></g>
+<g id="l3"><path d="M0 350C150 310 300 330 420 360C600 395 700 330 880 340C1000 345 1100 360 1200 340L1200 400L0 400Z" fill="var(--h3)"/><g id="sp"></g></g></svg>
+<canvas id="net" aria-hidden="true"></canvas>
+<div class="in"><h1>Closer,<br><em>on purpose.</em></h1>
+<p>Anujog is a private space to understand yourself, prepare the conversations you avoid, and practice one small change at a time.</p>
+<div class="btns"><button class="b1" data-go="product">Try the experience</button><button class="b2" data-go="story">See why it exists</button></div></div>
+<div class="sc">SCROLL<i></i></div></header>
+
+<section class="hook" id="hook"><div class="k">THE PROBLEM</div>
+<h2 id="hk">We’re told to communicate better. Nobody shows us how.</h2>
+<p>Advice is generic. The conversations that matter most, like money, family, and what comes next, are the ones we postpone. And it’s hard to trust an app with something this personal.</p></section>
+
+<section class="story" id="story"><div class="sticky"><div class="k">HOW CLOSENESS CHANGES</div>
+<svg id="sv" viewBox="0 0 100 50" aria-hidden="true"><path id="th" d="" fill="none" stroke="var(--t)" stroke-width=".5"/><circle id="ca" cy="25" r="7" fill="var(--g)"/><circle id="cb" cy="25" r="7" fill="var(--t)" opacity=".9"/></svg>
+<div id="cap" role="status">You start close.</div></div></section>
+
+<section class="sol" id="sol"><div class="k rv">THE ANSWER</div>
+<h2 class="rv">Meet <em>Anujog.</em></h2>
+<div class="four rv"><div><h3>Know me</h3><p>Your values, needs, and boundaries, in short sessions.</p></div><div><h3>Know us</h3><p>Shared topics, only with mutual consent.</p></div><div><h3>Grow</h3><p>Pick one small behavior to practice and review.</p></div><div><h3>Live it</h3><p>Shared plans and small adventures.</p></div></div>
+<div class="loop rv"><span>Understand</span><i>→</i><span>Talk</span><i>→</i><span>Practice</span><i>→</i><span>Review</span></div></section>
+
+<section class="demo" id="product"><div><div class="k">THE PRODUCT</div><h2>Don’t read about it. Touch it.</h2>
+<p>This is a prototype of the proposed screens. Tap anything.</p>
+<div class="tabs" id="tabs"><button aria-pressed="true">Today</button><button aria-pressed="false">Clarity</button><button aria-pressed="false">Date Roulette</button><button aria-pressed="false">Little Things</button></div></div>
+<div class="phone">
+<div class="scr on"><h3>Today</h3><small>One honest check-in. No long questionnaire.</small>
+<div class="pc"><b style="font-family:Fraunces,Georgia,serif;font-weight:400;font-size:20px">How are you, really?</b>
+<div class="opts" id="opts"><button aria-pressed="false">Heavy</button><button aria-pressed="false">Tired</button><button aria-pressed="false">Okay</button><button aria-pressed="false">Good</button><button aria-pressed="false">Bright</button></div>
+<div class="res" id="res">Pick one. It stays private unless you choose otherwise.</div></div></div>
+<div class="scr"><h3>Clarity is not a score</h3><small>Insights to talk about, never verdicts or rankings.</small>
+<div class="bl" id="bl"><i></i><i></i></div>
+<div class="res" id="cl" style="min-height:64px;font-size:15px">Only you can see this.</div>
+<button class="sw" id="sw1" role="switch" aria-checked="false"><span>Private until you choose</span><s></s></button></div>
+<div class="scr"><h3>Date Roulette</h3><small>Choose a small adventure. Three sealed choices.</small>
+<div class="cards" id="cards"><button>Sealed</button><button>Sealed</button><button>Sealed</button></div>
+<div class="res" id="rr" style="margin-top:16px">Tap a card to open it.</div></div>
+<div class="scr"><h3>Little Things I Love</h3><small>Share what you like. No obligation, no purchase tracking.</small>
+<div class="lt"><button class="sw" role="switch" aria-checked="true"><span>Hand cream, the unscented one</span><s></s></button><button class="sw" role="switch" aria-checked="false"><span>Coffee from the Sunday market</span><s></s></button><button class="sw" role="switch" aria-checked="true"><span>Learn to sail, someday</span><s></s></button></div>
+<small style="margin-top:14px">On means shared. Off stays only with you.</small></div>
+</div></section>
+
+<section id="jsec"><div class="k rv">A TUESDAY EVENING</div><h2 class="rv" style="font-size:clamp(36px,5vw,64px);max-width:760px">One person. One small, real step.</h2>
+<div class="jr">
+<div class="st rv"><h3>She checks in.</h3><p>Maya taps “Tired.” The app doesn’t push. It offers one small thing and lets her skip it.</p></div>
+<div class="st rv"><h3>She notices a pattern.</h3><p>The topic of money keeps getting postponed. Anujog names it as something worth discussing, not a verdict.</p></div>
+<div class="st rv"><h3>She prepares.</h3><p>Before the talk, she reviews her own words and chooses what to share. Nothing leaves without her say.</p></div>
+<div class="st rv"><h3>She tries one change.</h3><p>“Listen without interrupting.” A week later she looks back and decides what to keep.</p></div></div></section>
+
+<section id="why"><div class="k rv">WHY IT’S DIFFERENT</div><h2 class="rv" style="font-size:clamp(36px,5vw,64px);max-width:800px">Not a contact list. Not a social network.</h2>
+<div class="why rv"><div><h3>Works on your own first</h3><p>You get value from your own profile before anyone else joins.</p></div><div><h3>Every insight is labeled</h3><p>Private, shared, confirmed, or an AI guess, and you review it before it’s saved.</p></div><div><h3>Insight becomes action</h3><p>Each topic ends with one small change you choose and check later.</p></div><div><h3>Little Things I Love</h3><p>Share small preferences so you’re remembered, with no pressure.</p></div></div>
+<p class="note rv">We don’t claim to be the first or only app. AI guidance, games, and date ideas already exist. Our difference is the combination, plus consent, labels, and follow-through.</p></section>
+
+<section class="end" id="end"><svg viewBox="0 0 400 200" aria-hidden="true"><path d="M10 30 C120 20 160 90 200 100"/><path d="M390 40 C280 30 240 90 200 100"/><path d="M20 170 C130 180 160 120 200 100"/><path d="M380 160 C270 190 240 120 200 100"/><path d="M200 5 C190 50 205 70 200 100"/><circle cx="200" cy="100" r="9" fill="var(--t)" stroke="none"/></svg>
+<h2>Start with yourself.</h2><button class="b1" data-go="product">Try it again</button></section>
+<footer>Anujog · Student project prototype · [Team member names]</footer>
+
+<script>
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>$('#'+b.dataset.go).scrollIntoView({behavior:RM?'auto':'smooth'}));
+const hk=$('#hk');hk.innerHTML=hk.textContent.split(' ').map((w,i)=>`<span style="transition-delay:${i*70}ms">${w}</span>`).join(' ');
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.25});
+document.querySelectorAll('.rv,.hook,.end').forEach(e=>io.observe(e));
+// story scroll
+const st=$('#story'),ca=$('#ca'),cb=$('#cb'),th=$('#th'),cap=$('#cap');let lastC='';
+const caps=['You start close.','Life gets busy.','Without noticing, you drift.','One small, honest gesture.'];
+function sc(){const r=st.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));
+ const d=p<.3?12+p*20:p<.7?18+(p-.3)*190:94-(p-.7)*260;const x1=50-d/2,x2=50+d/2;
+ ca.setAttribute('cx',x1);cb.setAttribute('cx',x2);
+ const sag=Math.min(14,d/5);th.setAttribute('d',`M${x1} 25 Q50 ${25+sag} ${x2} 25`);th.setAttribute('stroke-opacity',d>70?.15:.9);
+ const c=caps[p<.25?0:p<.5?1:p<.78?2:3];if(c!==lastC){lastC=c;cap.style.opacity=0;setTimeout(()=>{cap.textContent=c;cap.style.opacity=1},200)}}
+addEventListener('scroll',sc,{passive:true});sc();
+function sprig(x,y,a,L,n){const q=a*Math.PI/180;let h=`<line x1="${x}" y1="${y}" x2="${x+Math.cos(q)*L}" y2="${y+Math.sin(q)*L}" stroke="var(--h3)" stroke-width="3"/>`;for(let i=1;i<=n;i++){const t=i/(n+1),px=x+Math.cos(q)*L*t,py=y+Math.sin(q)*L*t,d=i%2?1:-1;h+=`<g transform="translate(${px} ${py}) rotate(${a+90+d*55})"><ellipse cx="0" cy="-26" rx="9" ry="26" fill="${i%3?'var(--h3)':'var(--o)'}"/></g>`}return h}
+$('#sp').innerHTML=sprig(1140,400,-98,190,7)+sprig(70,400,-82,130,5);
+function par(){const y=Math.min(scrollY,innerHeight);$('#ls').style.transform=`translateY(${-y*.12}px)`;$('#l1').style.transform=`translateY(${y*.05}px)`;$('#l2').style.transform=`translateY(${y*.1}px)`;$('#l3').style.transform=`translateY(${y*.16}px)`}
+if(!RM){addEventListener('scroll',par,{passive:true});par()}
+// demo
+const scr=[...document.querySelectorAll('.scr')],tb=[...$('#tabs').children];
+tb.forEach((b,i)=>b.onclick=()=>{tb.forEach((x,j)=>x.setAttribute('aria-pressed',i===j));scr.forEach((s,j)=>s.classList.toggle('on',i===j))});
+const msg={Heavy:'Heavy days are allowed. Your one small thing: write two lines, only for yourself.',Tired:'Tired is information, not failure. Your one small thing: a ten-minute walk, or skip it.',Okay:'Okay is a fine place to start. Your one small thing: note one thing that went right.',Good:'Good. Your one small thing: tell someone you appreciate them.',Bright:'Nice. Your one small thing: share what’s going well.'};
+[...$('#opts').children].forEach(b=>b.onclick=()=>{[...$('#opts').children].forEach(x=>x.setAttribute('aria-pressed',x===b));$('#res').textContent=msg[b.textContent]});
+$('#sw1').onclick=e=>{const s=e.currentTarget,on=s.getAttribute('aria-checked')!=='true';s.setAttribute('aria-checked',on);$('#bl').classList.toggle('sh',on);$('#cl').textContent=on?'Shared: where you align, and what is worth talking about. No score.':'Only you can see this.'};
+document.querySelectorAll('.lt .sw').forEach(b=>b.onclick=()=>b.setAttribute('aria-checked',b.getAttribute('aria-checked')!=='true'));
+const ad=['A walk somewhere neither of you has been.','Cook something you can’t pronounce.','Watch the sunset with phones away.'];
+[...$('#cards').children].forEach((b,i)=>b.onclick=()=>{[...$('#cards').children].forEach(x=>{x.classList.remove('f');x.textContent='Sealed'});b.classList.add('f');b.textContent='Opened';$('#rr').textContent=ad[i]});
+// network
+const cv=$('#net'),cx=cv.getContext('2d');let W,H,N=[],m={x:-999,y:-999},col={};
+function rs(){const d=devicePixelRatio||1;W=cv.width=innerWidth*d;H=cv.height=cv.clientHeight*d;N=Array.from({length:Math.round(innerWidth/28)+14},()=>({x:Math.random()*W,y:Math.random()*H*.58,vx:(Math.random()-.5)*.35*d,vy:(Math.random()-.5)*.35*d,r:(2+Math.random()*3)*d,o:Math.random()<.2}))}
+addEventListener('resize',rs);rs();
+addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;m.x=(e.clientX-r.left)*d;m.y=(e.clientY-r.top)*d});
+let fr=0;function draw(){if(fr++%30===0){const s=getComputedStyle(document.documentElement);col={g:s.getPropertyValue('--g'),t:s.getPropertyValue('--t'),o:s.getPropertyValue('--o')}}
+ cx.clearRect(0,0,W,H);const d=devicePixelRatio||1,L=170*d;
+ N.forEach(a=>{if(!RM){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H*.58)a.vy*=-1;const dx=m.x-a.x,dy=m.y-a.y,q=Math.hypot(dx,dy);if(q<260*d&&q>1){a.x+=dx/q*.5*d;a.y+=dy/q*.5*d}}});
+ for(let i=0;i<N.length;i++){for(let j=i+1;j<N.length;j++){const a=N[i],b=N[j],q=Math.hypot(a.x-b.x,a.y-b.y);if(q<L){cx.strokeStyle=col.g;cx.globalAlpha=(1-q/L)*.5;cx.lineWidth=d;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}}
+ N.forEach(a=>{const q=Math.hypot(m.x-a.x,m.y-a.y);if(q<230*d){cx.strokeStyle=col.t;cx.globalAlpha=(1-q/(230*d))*.9;cx.lineWidth=1.8*d;cx.beginPath();cx.moveTo(m.x,m.y);cx.lineTo(a.x,a.y);cx.stroke()}
+  cx.globalAlpha=.9;cx.fillStyle=a.o?col.o:col.g;cx.beginPath();cx.arc(a.x,a.y,a.r,0,7);cx.fill()});
+ if(m.x>0){cx.globalAlpha=1;cx.fillStyle=col.t;cx.beginPath();cx.arc(m.x,m.y,7*d,0,7);cx.fill()}
+ cx.globalAlpha=1;if(!RM)requestAnimationFrame(draw)}
+draw();
+</script>
+</body>
+</html>
